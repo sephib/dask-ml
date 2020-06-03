@@ -1,6 +1,31 @@
 Changelog
 =========
 
+Version 1.5.0
+~~~~~~~~~~~~~
+
+* Support for Python 3.8 (:pr:`669`)
+* Compatibility with Scikit-Learn 0.23.0 (:pr:`669`)
+* Scikit-Learn 0.23.0 or newer is now required (:pr:`669`)
+* Removed previously deprecated Partial classes. Use :class:`dask_ml.wrappers.Incremental` instead (:pr:`674`)
+
+Version 1.4.0
+~~~~~~~~~~~~~
+
+* Added :class:`dask_ml.decomposition.IncrementalPCA` for out-of-core / distributed incremental PCA (:pr:`619`)
+* Improved logging and monitoring in incremental model selection (:pr:`528`)
+* Added :class:`dask_ml.ensemble.BlockwiseVotingClassifier` and :class:`dask_ml.ensemble.BlockwiseVotingRegressor` for blockwise training and ensemble prediction (:pr:`657`)
+* Improved documentation for :ref:`hyper-parameter-search` (:pr:`432`)
+
+Version 1.3.0
+~~~~~~~~~~~~~
+
+- Added ``shuffle`` support to :func:`dask_ml.model_selection.train_test_split` for ``DataFrame`` input (:pr:`625`)
+- Improved performance of :class:`dask_ml.model_selection.GridSearchCV` by re-using cached tasks (:pr:`622`)
+- Add support for ``DataFrame`` to :class:`dask_ml.model_selection.GridSearchCV` (:pr:`612`)
+- Fixed :meth:`dask_ml.linear_model.LinearRegression.score` to use ``r2_score`` rather than ``mse`` (:pr:`614`)
+- Handle missing data in :class:`dask_ml.preprocessing.StandardScaler` (:pr:`608`)
+
 Version 1.2.0
 ~~~~~~~~~~~~~
 
